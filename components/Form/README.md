@@ -13,7 +13,7 @@ Cuando en un proyecto se requieren varios formularios, es molesto estar creando 
 ### USO
 Aquí puede hacer uso del customHook **useForm** para el manejo de los eventos en los inputs. 
 ```
-    import { Form, Fields, Submit } form 'ruta de este archivo'
+    import { Form, Fields, Submit } from 'ruta de este archivo'
 
     <Form>
         <Fields>
