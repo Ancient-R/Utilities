@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 // css
 import './Table.css';
@@ -56,23 +56,21 @@ const Table = () => {
     ]
 
     return (
-        <>
-        <form className="table-search"
-                onSubmit={ handleSearch }
-            >
-                <input 
-                    type="text" 
-                    className="form-input"
-                    placeholder="Búsqueda de Usuario"
-                    autoComplete="off"
-                    name="search"
-                    value={ search }
-                    onChange={ handleInputChange }
-                />
-                <i className="fas fa-search input-icon"></i>
-            </form>
-
-           <div className="table-container">
+            <div className="table-container">
+                <form className="table-search"
+                    onSubmit={ handleSearch }
+                >
+                    <input 
+                        type="text" 
+                        className="form-input"
+                        placeholder="Búsqueda de Usuario"
+                        autoComplete="off"
+                        name="search"
+                        value={ search }
+                        onChange={ handleInputChange }
+                    />
+                    <i className="fas fa-search input-icon"></i>
+                </form>
                 <table className="table"
                 ref={ tableRef }>
 
@@ -97,7 +95,6 @@ const Table = () => {
                     </tbody>
                 </table>
             </div>
-        </>
     );
 }
 
