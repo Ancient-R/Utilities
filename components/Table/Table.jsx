@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 // css
 import './Table.css';
 
 const Table = () => {
 
+    // referencia a la tabla con useRef 'equivalente a document.getElementBy
+    const tableRef = useRef();
+    
     // state del input de búsqueda
     const  [ search, setSearch ] = useState('');
 
